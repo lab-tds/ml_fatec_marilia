@@ -8,12 +8,12 @@ Download: [BUSBRA](https://doi.org/10.5281/zenodo.8231412)).
 
 O banco de dados tem as imagens em modo B e foram segmentadas, desta forma temos uma máscara da localização da lesão na imagem:
 
-### Lesão provavelemnte benigna
+### Lesão provavelmente benigna
 
 ![ModoB](./pictures/bus_0147-l.png)
 ![ModoB](./pictures/mask_0147-l.png)
 
-### Lesão provavelemnte maligna
+### Lesão provavelmente maligna
 
 ![ModoB](./pictures/bus_0478-r.png)
 ![ModoB](./pictures/mask_0478-r.png)
