@@ -166,11 +166,27 @@ keras.utils.plot_model(model, show_shapes=True)
 epochs = 25
 
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-model.fit(
+history = model.fit(
     train_ds,
     epochs=epochs,
     validation_data=val_ds,
 )
+
+plt.plot(history.history['loss'], label='Training Loss')
+plt.plot(history.history['val_loss'], label='Validation Loss')
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.title('Training and Validation Loss')
+plt.legend()
+plt.show()
+
+plt.plot(history.history['accuracy'], label='Training Accuracy')
+plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
+plt.xlabel('Epoch')
+plt.ylabel('Accuracy')
+plt.title('Training and Validation Accuracy')
+plt.legend()
+plt.show()
 
 img = keras.utils.load_img("US/Malignant/bus_0015-s.png", target_size=image_size, color_mode='grayscale')
 plt.imshow(img, cmap='gray')
